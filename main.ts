@@ -31,4 +31,14 @@ x = [ "hello", 10 ]; //ok
 //Initialize it incorrectly
 //x = [ 10, "hello"]; //Error
 
-//
+//you can set the type to any and assign any kind of value to the letiable
+let iCanStoreAnyValue : any ;
+iCanStoreAnyValue = "Aditya";
+iCanStoreAnyValue = 3;
+iCanStoreAnyValue = ["Something", "someone"];
+iCanStoreAnyValue = ["Something", 1, 4, true];
+
+//you can set null or undefined also as values
+let iDontHaveAValue = null ;
+let iHaveUndefinedValue = undefined ;
+let icanOnlyHaveNullAndUndefinedValues : void ;
