@@ -12,9 +12,11 @@ let skillScoreOfStudent : number = 10;
 let totalNumberOfUsers : number = 239999987645;
 let userRating : number = 49.23242323;
 
+
 //you can declare booleans
 let isRegisteredUser : boolean = true;
 let isPaidUser : boolean = true;
+
 
 //you can declare arrays
 let popularSports : string[] = ["soccer", "basketball", "cricket"];
