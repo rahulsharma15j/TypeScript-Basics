@@ -1,5 +1,4 @@
 //usage of this keyword.
-var _this = this;
 /*function hello(thing){
    console.log(this);
    console.log(this + " says hello " + thing);
@@ -11,6 +10,20 @@ var _this = this;
 
 hello("world");*/
 //lexical binding.
+/*let myName = {
+    firstName : 'Rahul',
+    lastName : 'Sharma',
+    /*calculateFullName(){
+        console.log(this);
+        return this.firstName + ' ' + this.lastName;
+    }*/
+//calculateFullName:()=>{
+// console.log(this);
+// return this.firstName + ' ' + this.lastName;
+// }
+//}*/
+//let Name = myName.calculateFullName();
+//function inside function
 var myName = {
     firstName: 'Rahul',
     lastName: 'Sharma',
@@ -19,8 +32,12 @@ var myName = {
         return this.firstName + ' ' + this.lastName;
     }*/
     calculateFullName: function () {
-        console.log(_this);
-        return _this.firstName + ' ' + _this.lastName;
+        var _this = this;
+        return function () {
+            console.log(_this);
+            return _this.firstName + ' ' + _this.lastName;
+        };
     }
 };
 var Name = myName.calculateFullName();
+Name();
